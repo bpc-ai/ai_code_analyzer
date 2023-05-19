@@ -1,0 +1,3 @@
+Writing '/tmp/CFG-1711eb.dot'...  done. 
+Trying 'xdg-open' program... Remember to erase graph file: /tmp/CFG-1711eb.dot
+gio: file:///tmp/CFG-1711eb.dot: No application is registered as handling this file

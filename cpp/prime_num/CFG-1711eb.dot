@@ -1,0 +1,35 @@
+digraph unnamed {
+
+	Node0x565236e34f40 [shape=record,label="{ [B0 (EXIT)]\l}"];
+	Node0x565236e35018 [shape=record,label="{ [B1]\l  1: 0\l  2: return [B1.1];\l}"];
+	Node0x565236e35018 -> Node0x565236e34f40;
+	Node0x565236e35108 [shape=record,label="{ [B2]\l  1: operator\<\<\l  2: [B2.1] (ImplicitCastExpr, FunctionToPointerDecay, basic_ostream\<char, char_traits\<char\> \> &(*)(basic_ostream\<char, char_traits\<char\> \> &, const char *))\l  3: operator\<\<\l  4: [B2.3] (ImplicitCastExpr, FunctionToPointerDecay, __ostream_type &(*)(int))\l  5: cout\l  6: n\l  7: [B2.6] (ImplicitCastExpr, LValueToRValue, int)\l  8: [B2.5] \<\< [B2.7] (OperatorCall)\l  9: \" is not a prime number\"\l 10: [B2.9] (ImplicitCastExpr, ArrayToPointerDecay, const char *)\l 11: [B2.8] \<\< [B2.10] (OperatorCall)\l}"];
+	Node0x565236e35108 -> Node0x565236e35018;
+	Node0x565236e35360 [shape=record,label="{ [B3]\l  1: operator\<\<\l  2: [B3.1] (ImplicitCastExpr, FunctionToPointerDecay, basic_ostream\<char, char_traits\<char\> \> &(*)(basic_ostream\<char, char_traits\<char\> \> &, const char *))\l  3: operator\<\<\l  4: [B3.3] (ImplicitCastExpr, FunctionToPointerDecay, __ostream_type &(*)(int))\l  5: cout\l  6: n\l  7: [B3.6] (ImplicitCastExpr, LValueToRValue, int)\l  8: [B3.5] \<\< [B3.7] (OperatorCall)\l  9: \" is a prime number\"\l 10: [B3.9] (ImplicitCastExpr, ArrayToPointerDecay, const char *)\l 11: [B3.8] \<\< [B3.10] (OperatorCall)\l}"];
+	Node0x565236e35360 -> Node0x565236e35018;
+	Node0x565236e355d8 [shape=record,label="{ [B4]\l  1: is_prime\l  2: [B4.1] (ImplicitCastExpr, LValueToRValue, _Bool)\l   T: if [B4.2]\l}"];
+	Node0x565236e355d8 -> Node0x565236e35360;
+	Node0x565236e355d8 -> Node0x565236e35108;
+	Node0x565236e356d0 [shape=record,label="{ [B5]\l  1: i\l  2: ++[B5.1]\l}"];
+	Node0x565236e356d0 -> Node0x565236e359f8;
+	Node0x565236e357a8 [shape=record,label="{ [B6]\l  1: false\l  2: is_prime\l  3: [B6.2] = [B6.1]\l   T: break;\l}"];
+	Node0x565236e357a8 -> Node0x565236e355d8;
+	Node0x565236e35880 [shape=record,label="{ [B7]\l  1: n\l  2: [B7.1] (ImplicitCastExpr, LValueToRValue, int)\l  3: i\l  4: [B7.3] (ImplicitCastExpr, LValueToRValue, int)\l  5: [B7.2] % [B7.4]\l  6: 0\l  7: [B7.5] == [B7.6]\l   T: if [B7.7]\l}"];
+	Node0x565236e35880 -> Node0x565236e357a8;
+	Node0x565236e35880 -> Node0x565236e356d0;
+	Node0x565236e359f8 [shape=record,label="{ [B8]\l  1: i\l  2: [B8.1] (ImplicitCastExpr, LValueToRValue, int)\l  3: n\l  4: [B8.3] (ImplicitCastExpr, LValueToRValue, int)\l  5: 2\l  6: [B8.4] / [B8.5]\l  7: [B8.2] \<= [B8.6]\l   T: for (...; [B8.7]; ...)\l}"];
+	Node0x565236e359f8 -> Node0x565236e35880;
+	Node0x565236e359f8 -> Node0x565236e355d8;
+	Node0x565236e35b90 [shape=record,label="{ [B9]\l  1: 2\l  2: i\l  3: [B9.2] = [B9.1]\l}"];
+	Node0x565236e35b90 -> Node0x565236e359f8;
+	Node0x565236e35c88 [shape=record,label="{ [B10]\l  1: false\l  2: is_prime\l  3: [B10.2] = [B10.1]\l}"];
+	Node0x565236e35c88 -> Node0x565236e35b90;
+	Node0x565236e35e00 [shape=record,label="{ [B11]\l  1: n\l  2: [B11.1] (ImplicitCastExpr, LValueToRValue, int)\l  3: 1\l  4: [B11.2] == [B11.3]\l   T: if [B12.19] \|\| [B11.4]\l}"];
+	Node0x565236e35e00 -> Node0x565236e35c88;
+	Node0x565236e35e00 -> Node0x565236e35b90;
+	Node0x565236e46960 [shape=record,label="{ [B12]\l  1: int i;\l  2: int n;\l  3: true\l  4: bool is_prime = true;\l  5: operator\<\<\l  6: [B12.5] (ImplicitCastExpr, FunctionToPointerDecay, basic_ostream\<char, char_traits\<char\> \> &(*)(basic_ostream\<char, char_traits\<char\> \> &, const char *))\l  7: cout\l  8: \"Enter a positive integer: \"\l  9: [B12.8] (ImplicitCastExpr, ArrayToPointerDecay, const char *)\l 10: [B12.7] \<\< [B12.9] (OperatorCall)\l 11: operator\>\>\l 12: [B12.11] (ImplicitCastExpr, FunctionToPointerDecay, __istream_type &(*)(int &))\l 13: cin\l 14: n\l 15: [B12.13] \>\> [B12.14] (OperatorCall)\l 16: n\l 17: [B12.16] (ImplicitCastExpr, LValueToRValue, int)\l 18: 0\l 19: [B12.17] == [B12.18]\l   T: [B12.19] \|\| ...\l}"];
+	Node0x565236e46960 -> Node0x565236e35c88;
+	Node0x565236e46960 -> Node0x565236e35e00;
+	Node0x565236e46e40 [shape=record,label="{ [B13 (ENTRY)]\l}"];
+	Node0x565236e46e40 -> Node0x565236e46960;
+}
