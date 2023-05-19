@@ -1,4 +1,5 @@
 import re
+import sys
 import networkx as nx
 from config import regex_map
 import matplotlib.pyplot as plt
@@ -87,7 +88,8 @@ def draw_graph(G):
 
 
 if __name__ == '__main__':
-    with open("app.dot", "r") as fd:
+    dot_file = sys.argv[1]
+    with open(dot_file, "r") as fd:
         init_lines = fd.readlines()
     ext_lines = list()
     for init_line in init_lines:
