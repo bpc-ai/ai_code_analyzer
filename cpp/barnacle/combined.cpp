@@ -2,6 +2,12 @@
 //First coded 10-02-2021
 //This program demonstrates a class, uses multiple files for another class
 
+int sample_test_method(double h, double w) {
+    double area;
+    area = h * w;
+    return area;
+}
+
 #include <iostream>
 
 using namespace std;
@@ -166,6 +172,7 @@ int main()
     double boxHeight;      // Local variable for box height
 
     string input;          // Variable for start of program
+    double boxArea;
 
     cout << "Would you like to find the area or the volume?" << endl;
     cout << "(1) Area" << endl;
@@ -234,6 +241,8 @@ int main()
             cin >> boxHeight;
         }
         someBox.setHeightBox(boxHeight);
+
+        boxArea = sample_test_method(boxHeight, boxWidth);
 
     // Store the width, length, height of the box
     // in the box object.
